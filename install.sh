@@ -8,11 +8,8 @@ cd ..
 cd ..
 rm -rf app/Admin
 rm -rf public/vendor
-php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"
 php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
 php artisan admin:install
-php artisan queue:failed-table
-php artisan migrate
 php artisan jwt:secret --force
 php artisan ide-helper:generate
 php artisan ide-helper:meta
